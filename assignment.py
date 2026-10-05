@@ -10,7 +10,7 @@ def write_shopping_list(items,filename):
 
 # Exercise 2
 def read_names(filename):
-file = open(filename, "r")
+    file = open(filename, "r")
     lines = file.readlines()
     file.close()
     names=[]
