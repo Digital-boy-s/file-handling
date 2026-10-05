@@ -4,7 +4,7 @@ def write_shopping_list(items, filename):
     file = open(filename,"w")
     c=1
     for i in items:
-        file.write(f"{c},{i}\n")
+        file.write(f"{c}.{i}\n")
         c+=1
     file.close()
 
