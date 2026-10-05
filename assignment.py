@@ -1,22 +1,36 @@
 # You can remove 'pass' if you written code in the function
 # Exercise 1
 def write_shopping_list(items, filename):
-    file = open(filename,"w")
-    c=1
+    file = open(filename, "w")
+    c = 1
     for i in items:
-        file.write(f"{c}.{i}\n")
-        c+=1
+        file.write(f"{c}. {i}\n") 
+        c += 1
     file.close()
 
 # Exercise 2
 def read_names(filename):
-    # Write your code here
-    pass
+file = open(filename, "r")
+    lines = file.readlines()
+    file.close()
+    names = []
+    for line in lines:
+        cleaned_name = line.strip()
+        if cleaned_name != "":
+            names.append(cleaned_name)
+            
+    return names
 
 # Exercise 3
 def append_entry(filename, text):
-    # Write your code here
-    pass
+    file = open(filename, "a")
+    file.write(text + "\n")
+    file.close()
+    file = open(filename, "r")
+    lines = file.readlines()
+    file.close()
+
+    return len(lines)
 
 # Exercise 4
 def search_file(filename, word):
