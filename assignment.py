@@ -21,14 +21,14 @@ file = open(filename, "r")
     return names
 
 # Exercise 3
-#def append_entry(filename, text):
-    # file = open(filename, "a")
-    # file.write(text + "\n")
-    # file.close()
-    # file = open(filename, "r")
-    # lines = file.readlines()
-    # file.close()
-    # return len(lines)
+def append_entry(filename, text):
+    file = open(filename, "a")
+    file.write(text + "\n")
+    file.close()
+    file = open(filename, "r")
+    lines = file.readlines()
+    file.close()
+    return len(lines)
 
 # Exercise 4
 def search_file(filename, word):
