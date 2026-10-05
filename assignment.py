@@ -6,7 +6,7 @@ def write_shopping_list(items, filename):
     for i in items:
         file.write(f"{c},{i}\n")
         c+=1
-        file.close
+    file.close()
 
 # Exercise 2
 def read_names(filename):
